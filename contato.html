@@ -68,5 +68,23 @@
   </p>
 </footer>
 
+<script>
+  const btn = document.getElementById("discordBtn");
+  const username = "nayle_dev";
+  const textoOriginal = "@nayle_dev";
+
+  btn.addEventListener("click", () => {
+    navigator.clipboard.writeText(username).then(() => {
+      btn.textContent = "Copiado para a área de transferência!";
+      btn.disabled = true;
+
+      setTimeout(() => {
+        btn.textContent = textoOriginal;
+        btn.disabled = false;
+      }, 2000);
+    });
+  });
+</script>
+
 </body>
 </html>

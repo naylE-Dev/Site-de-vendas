@@ -182,3 +182,7 @@ footer {
   font-weight: bold;
   border-radius: 8px;
 }
+
+button.contato-btn {
+  cursor: pointer;
+}

@@ -194,7 +194,7 @@ button.contato-btn {
 .logo-text {
   font-family: 'Fraunces', serif;
   font-size: clamp(1.8rem, 5vw, 2.7rem);
-  font-weight: 900;
+  font-weight: 150;
   color: white;
-  margin-top: -4px;
+  margin-top: -20px;
 }

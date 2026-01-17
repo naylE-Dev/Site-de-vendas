@@ -6,11 +6,54 @@
   <title>ProntoWeb</title>
   <link rel="icon" type="image/png" href="favcon.png">
   <link rel="stylesheet" href="style.css">
+  <!-- Fonte bonita para o texto embaixo da imagem -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Figura que contém o logo e o texto */
+    .logo-figure {
+      display: inline-block; /* mantém agrupados imagem + legenda */
+      margin-bottom: 12px;   /* espaço entre a figura e o restante do header */
+      line-height: 1;
+    }
+
+    /* Opção 1: largura em 200% (dobra em relação ao contêiner pai) */
+    .logo-figure img {
+      display: block;
+      width: 200%;       /* DOBRA a largura do contêiner pai */
+      height: auto;      /* mantém proporção */
+      max-width: none;   /* evita que outras regras limitem a imagem */
+      margin: 0 auto;    /* centraliza o elemento dentro do figure */
+    }
+
+    /* Texto bonitinho em outra fonte logo embaixo da imagem */
+    .logo-caption {
+      margin-top: 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      color: #222;
+    }
+
+    /* Ajuste responsivo: em telas pequenas reduzimos a escala para evitar overflow grande */
+    @media (max-width: 480px) {
+      .logo-figure img {
+        width: 140%;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <img src="favcon.png" alt="Logo do negócio">
+  <figure class="logo-figure">
+    <img src="favcon.png" alt="Logo do negócio">
+    <figcaption class="logo-caption">Sites rápidos. Sem mensalidade.</figcaption>
+  </figure>
+
   <h1>Sites rápidos. Sem mensalidade.</h1>
   <p>
     Criação de sites simples e profissionais<br>
@@ -87,8 +130,7 @@
 <footer>
   <p>© 2025 – ProntoWeb</p>
   <p class="assinatura">
-  Desenvolvido por <a class="link-clean" href="contato.html">@naylE</a>
-</p>
+    Desenvolvido por <a class="link-clean" href="contato.html">@naylE</a>
   </p>
 </footer>
 

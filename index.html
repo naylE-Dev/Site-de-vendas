@@ -6,11 +6,56 @@
   <title>ProntoWeb</title>
   <link rel="icon" type="image/png" href="favcon.png">
   <link rel="stylesheet" href="style.css">
+  <!-- Fonte bonita para o texto embaixo da imagem -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    /* Ajustes locais para aplicar o scale(2) ao logo e estilo do caption */
+    header {
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* Figura que contém o logo e o texto */
+    .logo-figure {
+      display: inline-block; /* mantém agrupados imagem + legenda */
+      margin-bottom: 12px;   /* espaço entre a figura e o restante do header */
+    }
+
+    .logo-figure img {
+      display: block;
+      /* Opção 2: escala visual (não altera o espaço de layout) */
+      transform: scale(2);
+      transform-origin: center center; /* ponto a partir do qual a imagem cresce */
+      /* evita que alguma regra global limite a imagem */
+      max-width: none;
+      height: auto;
+    }
+
+    /* Texto bonitinho em outra fonte logo embaixo da imagem */
+    .logo-caption {
+      margin-top: 8px;
+      font-family: "Playfair Display", serif;
+      font-size: 1rem;
+      color: #222;
+      line-height: 1.1;
+    }
+
+    /* Pequeno cuidado: garantir que o header não fique muito quebrado em telas pequenas */
+    @media (max-width: 480px) {
+      .logo-figure img {
+        transform: scale(1.6); /* reduz a escala em telas muito pequenas para evitar overflow */
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <img src="favcon.png" alt="Logo do negócio">
+  <figure class="logo-figure">
+    <img src="favcon.png" alt="Logo do negócio">
+    <figcaption class="logo-caption">Sites rápidos. Sem mensalidade.</figcaption>
+  </figure>
+
   <h1>Sites rápidos. Sem mensalidade.</h1>
   <p>
     Criação de sites simples e profissionais<br>
@@ -87,8 +132,7 @@
 <footer>
   <p>© 2025 – ProntoWeb</p>
   <p class="assinatura">
-  Desenvolvido por <a class="link-clean" href="contato.html">@naylE</a>
-</p>
+    Desenvolvido por <a class="link-clean" href="contato.html">@naylE</a>
   </p>
 </footer>
 

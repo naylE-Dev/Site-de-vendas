@@ -14,7 +14,7 @@ header {
 }
 
 header img {
-  width: 180px;        /* tamanho visível */
+  width: 220px;        /* tamanho visível */
   max-width: 100%;
   height: auto;        /* mantém proporção */
   image-rendering: auto;
